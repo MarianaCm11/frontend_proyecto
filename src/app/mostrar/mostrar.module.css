@@ -1,0 +1,65 @@
+.fontMontserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #fff; /* Fondo blanco */
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #471567; /* Morado oscuro */
+}
+
+.table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: #d1e5d9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.table th, .table td {
+    border: 1px solid #ccc;
+    padding: 0.75rem;
+    text-align: center;
+}
+
+.table th {
+    background-color: #53147a; /* Morado oscuro */
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.table tr:nth-child(even) {
+    background-color: #e6d8f5; /* Verde agua claro */
+}
+
+.table tr:hover {
+    background-color: #ffffff; /* Verde agua más oscuro */
+}
+
+.icon {
+    margin-right: 0.5rem;
+    cursor: pointer;
+    color: #6a1b9a; /* Morado oscuro */
+    text-align: center; /* Centrar el contenido */
+}
+
+.icon:hover {
+    color: #9f2c80; /* Morado más oscuro */
+}
+
+.error {
+    color: red;
+    margin-bottom: 1rem;
+}

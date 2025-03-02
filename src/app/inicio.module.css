@@ -1,0 +1,44 @@
+.fontMontserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #ffffff; /* Verde agua claro */
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #410d62; /* Morado oscuro */
+}
+
+.links {
+    display: flex;
+    gap: 1rem;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #6a1b9a; /* Morado oscuro */
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid #6a1b9a; /* Morado oscuro */
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.link:hover {
+    background-color: #6a1b9a; /* Morado oscuro */
+    color: #fff;
+}
+
+.icon {
+    margin-right: 0.5rem;
+}
