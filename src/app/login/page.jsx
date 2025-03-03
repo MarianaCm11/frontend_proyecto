@@ -5,17 +5,12 @@ import { useState } from "react";
 import { useRouter } from "next/navigation"; // Importar useRouter
 import styles from './login.module.css'; // Importar el archivo de estilos
 import Head from 'next/head'; // Importar Head para incluir la fuente
-import { FaUser, FaEye, FaEyeSlash, FaLock } from 'react-icons/fa'; // Importar iconos
+import { FaUser, FaLock } from 'react-icons/fa'; // Importar iconos
 
 export default function Login() {
     const { register, handleSubmit } = useForm();
     const [error, setError] = useState(null);
-    const [showPassword, setShowPassword] = useState(false); // Estado para mostrar/ocultar contraseña
     const router = useRouter(); // Inicializar useRouter
-
-    const togglePasswordVisibility = () => {
-        setShowPassword(!showPassword);
-    };
 
     return (
         <>
@@ -48,10 +43,7 @@ export default function Login() {
                     </div>
                     <div className={styles.inputContainer}>
                         <FaLock className={styles.icon} />
-                        <input className={styles.input} type={showPassword ? "text" : "password"} placeholder="Contraseña" {...register("password")} />
-                        <span className={styles.passwordToggle} onClick={togglePasswordVisibility}>
-                            {showPassword ? <FaEyeSlash /> : <FaEye />}
-                        </span>
+                        <input className={styles.input} type="password" placeholder="Contraseña" {...register("password")} />
                     </div>
                     {error && <p className={styles.error}>{error}</p>}
                     <button className={styles.button} type="submit">Iniciar Sesión</button>
