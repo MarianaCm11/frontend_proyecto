@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { conexionMostrar } from '../../conexionApi/peticiones';
 import styles from './mostrar.module.css'; // Importar los estilos del módulo CSS
+import { FaEdit, FaTrash } from 'react-icons/fa'; // Importar iconos
 
 const MostrarPage = () => {
     const [data, setData] = useState([]);
@@ -28,7 +29,8 @@ const MostrarPage = () => {
                     <tr>
                         <th>Username</th>
                         <th>Email</th>
-                        <th>Type</th>
+                        <th>Tipo</th>
+                        <th>Editar/Borrar</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -37,6 +39,10 @@ const MostrarPage = () => {
                             <td>{item.username}</td>
                             <td>{item.email}</td>
                             <td>{item.type}</td>
+                            <td>
+                                <FaEdit className={styles.icon} />
+                                <FaTrash className={styles.icon} />
+                            </td>
                         </tr>
                     ))} 
                 </tbody>
