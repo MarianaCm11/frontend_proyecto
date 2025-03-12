@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { useRouter, useParams } from "next/navigation";
 import { buscarUsuario, actualizarUsuario } from "@/conexionApi/peticiones";
 import styles from './editar.module.css';
-import Head from 'next/head'; // Importar Head para incluir la fuente
+import Head from 'next/head';
 
 export default function EditarUsuario() {
     const { register, handleSubmit, setValue } = useForm();

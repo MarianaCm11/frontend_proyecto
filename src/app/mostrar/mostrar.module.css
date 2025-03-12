@@ -1,4 +1,3 @@
-
 .fontMontserrat {
     font-family: 'Montserrat', sans-serif;
 }
@@ -10,9 +9,9 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #000; /* Fondo negro para contraste */
+    background-color: #000;
     border-radius: 5px;
-    font-family: 'Montserrat', sans-serif; /* Aplicar la fuente Montserrat */
+    font-family: 'Montserrat', sans-serif;
 }
 
 .title {
@@ -51,8 +50,8 @@
 .icon {
     margin-right: 0.9rem;
     cursor: pointer;
-    color: #00bfff; /* Color azul */
-    text-align: center; /* Centrar el contenido */
+    color: #00bfff;
+    text-align: center;
     transition: 0.5s ease-in-out;
     font-size: 1.5rem;
 }
@@ -60,7 +59,7 @@
 .icon:hover {
     transition: 0.2s ease-in-out;
     transform: scale(1.1);
-    color: #11556b; /* Azul más oscuro */
+    color: #11556b;
 }
 
 .error {
@@ -118,10 +117,10 @@
     display: flex;
     align-items: center;
     font-size: 1.2rem;
-    color: #00bfff; /* Color azul */
+    color: #00bfff;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    border: 0px solid #00bfff; /* Color azul */
+    border: 0px solid #00bfff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     overflow: hidden;
@@ -135,7 +134,7 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background-color: #246a82; /* Color azul */
+    background-color: #246a82;
     transition: left 0.5s ease-in-out;
     z-index: -1;
 }
@@ -155,10 +154,10 @@
     display: flex;
     align-items: center;
     font-size: 1.2rem;
-    color: #a13737; /* Color azul */
+    color: #a13737;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    border: 0px solid #00bfff; /* Color azul */
+    border: 0px solid #00bfff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     overflow: hidden;
@@ -172,15 +171,13 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background-color: #246a82; /* Color azul */
+    background-color: #246a82;
     transition: left 0.5s ease-in-out;
     z-index: -1;
-
 }
 
 .link_exit:hover::before {
     background-image: none;
-
 }
 
 .link_exit:hover {
@@ -189,8 +186,6 @@
     transform: scale(1.04);
     background-image: none;
     box-shadow: 0 0 10px #db2828;
-
-
 }
 
 .icon_exit {
@@ -221,33 +216,33 @@
 .actions {
     display: flex;
     flex-direction: row;
-    gap: 10px; /* Espacio entre los enlaces */
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; 
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 .submit {
-    margin-top: 10px; /* Añadir espacio entre los botones */
+    margin-top: 10px;
 }
 
 .btnRegresar {
-    background: linear-gradient(45deg, #ff6347, #1a1a1a); /* Degradado diferente para el botón de regresar */
+    background: linear-gradient(45deg, #ff6347, #1a1a1a);
     border: none;
     outline: none;
-    padding: 18px 4px; /* Ajustar el padding para centrar el texto verticalmente */
+    padding: 18px 4px;
     border-radius: 10px;
-    color: #fff; /* Cambiar el color del texto del botón */
+    color: #fff;
     font-size: 16px;
     transform: .3s ease;
-    width: 100%; /* Asegurar que el botón abarque el 100% del ancho */
-    box-sizing: border-box; /* Asegurar que el padding no afecte el tamaño total */
+    width: 100%;
+    box-sizing: border-box;
     display: flex;
-    align-items: center; /* Centrar el texto verticalmente */
-    justify-content: center; /* Centrar el texto horizontalmente */
-    margin-top: 10px; /* Añadir espacio entre los botones */
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 .btnRegresar:hover {
-    background: linear-gradient(45deg, #ff634796, #1a1a1a96); /* Degradado diferente al pasar el cursor */
-    box-shadow: 0 0 10px #ff6347; /* Añadir un efecto de sombra roja */
+    background: linear-gradient(45deg, #ff634796, #1a1a1a96);
+    box-shadow: 0 0 10px #ff6347;
 }

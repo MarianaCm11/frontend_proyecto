@@ -4,8 +4,8 @@
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #000; /* Fondo negro para contraste */
-    font-family: 'Montserrat', sans-serif; /* Aplicar la fuente Montserrat */
+    background-color: #000;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .form {
@@ -19,7 +19,7 @@
     background-color: #1a1a1a;
     color: #fff;
     border: 1px solid #333;
-    font-family: 'Montserrat', sans-serif; /* Aplicar la fuente Montserrat */
+    font-family: 'Montserrat', sans-serif;
 }
 
 .title {
@@ -81,24 +81,23 @@
 
 .form label {
     position: relative;
-    width: 100%; /* Asegurar que el label abarque el 100% del ancho */
+    width: 100%;
 }
 
 .form label .input {
     background-color: #333;
     color: #fff;
     width: 100%;
-    padding: 18px 4px; /* Ajustar el padding para centrar el texto verticalmente */
+    padding: 18px 4px;
     outline: 0;
     border: 1px solid rgba(105, 105, 105, 0.397);
     border-radius: 10px;
-    margin-bottom: 20px; /* Añadir más espacio entre los inputs */
-    box-sizing: border-box; /* Asegurar que el padding no afecte el tamaño total */
+    margin-bottom: 20px;
+    box-sizing: border-box;
     display: flex;
-    align-items: center; /* Centrar el texto verticalmente */
+    align-items: center;
 }
 
-/* Estilos para el campo de correo (usuario) */
 .form label .input[type="email"] {
     background-color: #333;
     color: #fff;
@@ -123,7 +122,6 @@
     box-shadow: 0 0 5px #00bfff;
 }
 
-/* Estilos para el campo de contraseña sin animación */
 .form label .input[type="password"] {
     background-color: #333;
     color: #fff;
@@ -149,13 +147,13 @@
 }
 
 .form label .input:hover {
-    border-color: #00bfff; /* Cambiar el color del borde al pasar el cursor */
-    box-shadow: 0 0 5px #00bfff; /* Añadir un efecto de sombra azul */
+    border-color: #00bfff;
+    box-shadow: 0 0 5px #00bfff;
 }
 
 .form label .input:focus {
-    border-color: #00bfff; /* Cambiar el color del borde al enfocar */
-    box-shadow: 0 0 5px #00bfff; /* Añadir un efecto de sombra azul */
+    border-color: #00bfff;
+    box-shadow: 0 0 5px #00bfff;
 }
 
 .form label .input + span {
@@ -167,7 +165,7 @@
     font-size: 1.2em;
     cursor: text;
     transition: 0.3s ease;
-    width: calc(100% - 20px); /* Asegurar que el span abarque el ancho del input */
+    width: calc(100% - 20px);
 }
 
 .form label .input:placeholder-shown + span {
@@ -190,32 +188,32 @@
 .submit {
     border: none;
     outline: none;
-    padding: 18px 4px; /* Ajustar el padding para centrar el texto verticalmente */
+    padding: 18px 4px;
     border-radius: 10px;
-    color: #fff; /* Cambiar el color del texto del botón */
+    color: #fff;
     font-size: 16px;
     transform: .3s ease;
-    background: linear-gradient(45deg, #00bfff, #1a1a1a); /* Añadir un degradado al botón */
-    width: 100%; /* Asegurar que el botón abarque el 100% del ancho */
-    box-sizing: border-box; /* Asegurar que el padding no afecte el tamaño total */
+    background: linear-gradient(45deg, #00bfff, #1a1a1a);
+    width: 100%;
+    box-sizing: border-box;
     display: flex;
-    align-items: center; /* Centrar el texto verticalmente */
-    justify-content: center; /* Centrar el texto horizontalmente */
-    margin-top: 10px; /* Añadir espacio entre los botones */
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 .submit:hover {
-    background: linear-gradient(45deg, #00bfff96, #1a1a1a96); /* Añadir un degradado al botón al pasar el cursor */
-    box-shadow: 0 0 10px #00bfff; /* Añadir un efecto de sombra azul */
+    background: linear-gradient(45deg, #00bfff96, #1a1a1a96);
+    box-shadow: 0 0 10px #00bfff;
 }
 
 .btnRegresar {
-    background: linear-gradient(45deg, #ff6347, #1a1a1a); /* Degradado diferente para el botón de regresar */
+    background: linear-gradient(45deg, #ff6347, #1a1a1a);
 }
 
 .btnRegresar:hover {
-    background: linear-gradient(45deg, #ff634796, #1a1a1a96); /* Degradado diferente al pasar el cursor */
-    box-shadow: 0 0 10px #ff6347; /* Añadir un efecto de sombra roja */
+    background: linear-gradient(45deg, #ff634796, #1a1a1a96);
+    box-shadow: 0 0 10px #ff6347;
 }
 
 @keyframes pulse {

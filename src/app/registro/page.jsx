@@ -2,23 +2,22 @@
 import { useForm } from "react-hook-form";
 import { registrarUsuario } from "@/conexionApi/peticiones";
 import { redirect } from "next/navigation";
-import Head from 'next/head'; // Importar Head para incluir la fuente
-import styles from './registro.module.css'; // Importar el archivo CSS
+import Head from 'next/head';
+import styles from './registro.module.css';
 
 export default function Registro() {
     const { register, handleSubmit } = useForm();
 
     return (
-        <div className={styles.container}> {/* Aplicar la clase container */}
+        <div className={styles.container}>
             <Head>
                 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
             </Head>
-            <div className={styles.card}> {/* Envolver el formulario en una tarjeta */}
+            <div className={styles.card}>
                 <form action="" onSubmit={handleSubmit(async (datosUsuario) => {
                     const respuesta = await registrarUsuario(datosUsuario);
-                   // console.log(respuesta);
                     redirect("/");
-                })} className={styles.form}> {/* Aplicar estilo */}
+                })} className={styles.form}>
                     <p className={styles.title}>Registro</p>
                     <p className={styles.message}>Ingresa tus datos para el registro.</p>
                     <label>
@@ -34,13 +33,6 @@ export default function Registro() {
                         <span>Contraseña</span>
                     </label>
                     <button type="submit" className={styles.submit}>Registrar usuario</button>
-                    <button
-                        type="button"
-                        onClick={() => window.history.back()}
-                        className={`${styles.submit} ${styles.btnRegresar}`}
-                    >
-                        Regresar
-                    </button>
                 </form>
             </div>
         </div>

@@ -23,7 +23,7 @@ const MichiPage = () => {
       </div>
       <button
         onClick={() => window.history.back()}
-        className="btn-regresar link" // Usa la clase 'link' para estilos consistentes
+        className="btn-regresar link"
       >
         Regresar
       </button>

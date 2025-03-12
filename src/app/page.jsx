@@ -1,8 +1,7 @@
 import Link from 'next/link';
-import styles from './inicio.module.css'; // Importar el archivo de estilos
+import styles from './inicio.module.css'; 
 import { VscLinkExternal } from "react-icons/vsc";
 import { FiUserPlus, FiGithub } from "react-icons/fi";
-
 
 export default function Inicio() {
     return(

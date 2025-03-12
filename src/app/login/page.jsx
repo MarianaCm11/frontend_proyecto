@@ -3,8 +3,7 @@ import { useForm } from "react-hook-form";
 import { iniciarSesion, verificarUsuarioLogueado, verificarAdministrador } from "@/conexionApi/peticiones";
 import { useRouter } from "next/navigation";
 import styles from './login.module.css';
-import Head from 'next/head'; // Importar Head para incluir la fuente
-import { FaUser, FaLock } from 'react-icons/fa'; // Importar iconos
+import Head from 'next/head'; 
 import { useState } from "react";
 
 export default function Login() {
