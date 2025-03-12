@@ -4,27 +4,61 @@
 
 .container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     height: 100vh;
-    background-color: #fff; /* Fondo blanco */
+    margin: 0;
+    background-color: #000; /* Fondo negro para contraste */
+    font-family: 'Montserrat', sans-serif; /* Aplicar la fuente Montserrat */
+}
+
+.card {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #333;
+    width: 350px;
 }
 
 .title {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #6a1b9a; /* Morado oscuro */
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    color: #00bfff;
+}
+
+.title::before {
+    width: 18px;
+    height: 18px;
+}
+
+.title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+}
+
+.title::before,
+.title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: #00bfff;
 }
 
 .form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    gap: 10px;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif; /* Aplicar la fuente Montserrat */
 }
 
 .inputContainer {
@@ -37,41 +71,112 @@
 
 .icon {
     margin-right: 0.5rem;
-    color: #6a1b9a; /* Morado oscuro */
+    color: #00bfff; /* Color azul */
 }
 
-.input {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.passwordContainer {
+.form label {
     position: relative;
-    width: 100%;
+    width: 100%; /* Asegurar que el label abarque el 100% del ancho */
 }
 
-.passwordToggle {
+.form label .input {
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    padding: 18px 4px; /* Ajustar el padding para centrar el texto verticalmente */
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+    margin-bottom: 20px; /* Añadir más espacio entre los inputs */
+    box-sizing: border-box; /* Asegurar que el padding no afecte el tamaño total */
+    display: flex;
+    align-items: center; /* Centrar el texto verticalmente */
+}
+
+.form label .input:hover {
+    border-color: #00bfff; /* Cambiar el color del borde al pasar el cursor */
+    box-shadow: 0 0 5px #00bfff; /* Añadir un efecto de sombra azul */
+}
+
+.form label .input:focus {
+    border-color: #00bfff; /* Cambiar el color del borde al enfocar */
+    box-shadow: 0 0 5px #00bfff; /* Añadir un efecto de sombra azul */
+}
+
+.form label .input + span {
+    color: rgba(255, 255, 255, 0.5);
     position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    cursor: pointer;
+    left: 10px;
+    top: 15px;
+    font-size: 1.2em;
+    cursor: text;
+    transition: 0.3s ease;
+    width: calc(100% - 20px); /* Asegurar que el span abarque el ancho del input */
+}
+
+.form label .input:placeholder-shown + span {
+    top: 12.5px;
+    font-size: 0.9em;
+}
+
+.form label .input:focus + span,
+.form label .input:valid + span {
+    color: #00bfff;
+    top: 0px;
+    font-size: 0.7em;
+    font-weight: 600;
 }
 
 .button {
-    padding: 0.5rem 1rem;
-    background-color: #6a1b9a; /* Morado oscuro */
-    color: #fff;
     border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 1rem;
+    outline: none;
+    padding: 18px 4px; /* Ajustar el padding para centrar el texto verticalmente */
+    border-radius: 10px;
+    color: #fff; /* Cambiar el color del texto del botón */
+    font-size: 16px;
+    transform: .3s ease;
+    background: linear-gradient(45deg, #00bfff, #1a1a1a); /* Añadir un degradado al botón */
+    width: 100%; /* Asegurar que el botón abarque el 100% del ancho */
+    box-sizing: border-box; /* Asegurar que el padding no afecte el tamaño total */
+    display: flex;
+    align-items: center; /* Centrar el texto verticalmente */
+    justify-content: center; /* Centrar el texto horizontalmente */
 }
 
 .button:hover {
-    background-color: #4a148c; /* Morado más oscuro */
+    background: linear-gradient(45deg, #00bfff96, #1a1a1a96); /* Añadir un degradado al botón al pasar el cursor */
+    box-shadow: 0 0 10px #00bfff; /* Añadir un efecto de sombra azul */
+}
+
+.submit {
+    border: none;
+    outline: none;
+    padding: 18px 4px; /* Ajustar el padding para centrar el texto verticalmente */
+    border-radius: 10px;
+    color: #fff; /* Cambiar el color del texto del botón */
+    font-size: 16px;
+    transform: .3s ease;
+    background: linear-gradient(45deg, #00bfff, #1a1a1a); /* Añadir un degradado al botón */
+    width: 100%; /* Asegurar que el botón abarque el 100% del ancho */
+    box-sizing: border-box; /* Asegurar que el padding no afecte el tamaño total */
+    display: flex;
+    align-items: center; /* Centrar el texto verticalmente */
+    justify-content: center; /* Centrar el texto horizontalmente */
+    margin-top: 10px; /* Añadir espacio entre los botones */
+}
+
+.submit:hover {
+    background: linear-gradient(45deg, #00bfff96, #1a1a1a96); /* Añadir un degradado al botón al pasar el cursor */
+    box-shadow: 0 0 10px #00bfff; /* Añadir un efecto de sombra azul */
+}
+
+.btnRegresar {
+    background: linear-gradient(45deg, #ff6347, #1a1a1a); /* Degradado diferente para el botón de regresar */
+}
+
+.btnRegresar:hover {
+    background: linear-gradient(45deg, #ff634796, #1a1a1a96); /* Degradado diferente al pasar el cursor */
+    box-shadow: 0 0 10px #ff6347; /* Añadir un efecto de sombra roja */
 }
 
 .error {
@@ -80,12 +185,18 @@
 }
 
 .message {
-    color: green;
-    margin-bottom: 1rem;
+    font-size: 14.5px;
+    color: rgba(255, 255, 255, 0.7);
 }
 
-.welcomeContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+@keyframes pulse {
+    from {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1.8);
+        opacity: 0;
+    }
 }

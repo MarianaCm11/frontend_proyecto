@@ -1,3 +1,4 @@
+
 .fontMontserrat {
     font-family: 'Montserrat', sans-serif;
 }
@@ -5,62 +6,61 @@
 .container {
     display: flex;
     flex-direction: column;
+    margin: 0px;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #fff; /* Fondo blanco */
-    margin: 20px;
-    padding: 20px;
+    background-color: #000; /* Fondo negro para contraste */
     border-radius: 5px;
+    font-family: 'Montserrat', sans-serif; /* Aplicar la fuente Montserrat */
 }
 
 .title {
-    font-size: 24px;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #333;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    color: #00bfff;
 }
 
-.table {
-    width: 80%;
-    border-collapse: collapse;
-    margin-top: 1rem;
-    background-color: #e8f5ed;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.title::before {
+    width: 18px;
+    height: 18px;
 }
 
-.table th, .table td {
-    border: 1px solid #ccc;
-    padding: 0.75rem;
-    text-align: center;
+.title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
 }
 
-.table th {
-    background-color: #53147a; /* Morado oscuro */
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-}
-
-.table tr:nth-child(even) {
-    background-color: #e6d8f5; /* Verde agua claro */
-}
-
-.table tr:hover {
-    background-color: #ffffff; /* Verde agua más oscuro */
+.title::before,
+.title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: #00bfff;
 }
 
 .icon {
-    margin-right: 0.5rem;
+    margin-right: 0.9rem;
     cursor: pointer;
-    color: #6a1b9a; /* Morado oscuro */
+    color: #00bfff; /* Color azul */
     text-align: center; /* Centrar el contenido */
+    transition: 0.5s ease-in-out;
+    font-size: 1.5rem;
 }
 
 .icon:hover {
-    color: #9f2c80; /* Morado más oscuro */
+    transition: 0.2s ease-in-out;
+    transform: scale(1.1);
+    color: #11556b; /* Azul más oscuro */
 }
 
 .error {
@@ -72,29 +72,182 @@
     width: 80%;
     border-collapse: collapse;
     margin-top: 1rem;
-    background-color: #e9f6ee;
+    background-color: #1a1a1a;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .data-table th, .data-table td {
-    border: 1px solid #ccc;
     padding: 0.75rem;
     text-align: center;
 }
 
 .data-table th {
-    background-color: #53147a; /* Morado oscuro */
-    color: #fff;
+    background-color: #00bfff; 
+    color: #e5e5e5;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
 }
 
-.data-table tr:nth-child(even) {
-    background-color: #e6d8f5; /* Verde agua claro */
+.data-table tr {
+    background-color: #ffffff;
 }
 
 .data-table tr:hover {
-    background-color: #ffffff; /* Verde agua más oscuro */
+    background-color: #c1eaf1; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.links {
+    display: flex;
+    gap: 1rem;
+}
+
+.link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #00bfff; /* Color azul */
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 0px solid #00bfff; /* Color azul */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.4s ease-in-out;
+}
+
+.link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #246a82; /* Color azul */
+    transition: left 0.5s ease-in-out;
+    z-index: -1;
+}
+
+.link:hover::before {
+    left: 0;
+}
+
+.link:hover {
+    cursor: pointer;
+    color: #fff;
+    transform: scale(1.04);
+}
+
+.link_exit {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #a13737; /* Color azul */
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 0px solid #00bfff; /* Color azul */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.4s ease-in-out;
+}
+
+.link_exit::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #246a82; /* Color azul */
+    transition: left 0.5s ease-in-out;
+    z-index: -1;
+
+}
+
+.link_exit:hover::before {
+    background-image: none;
+
+}
+
+.link_exit:hover {
+    cursor: pointer;
+    color: #fff;
+    transform: scale(1.04);
+    background-image: none;
+    box-shadow: 0 0 10px #db2828;
+
+
+}
+
+.icon_exit {
+    margin-right: 0.5rem;
+}
+
+.bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    width: 100%;
+    position: static;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    gap: 10px; /* Espacio entre los enlaces */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; 
+}
+
+.submit {
+    margin-top: 10px; /* Añadir espacio entre los botones */
+}
+
+.btnRegresar {
+    background: linear-gradient(45deg, #ff6347, #1a1a1a); /* Degradado diferente para el botón de regresar */
+    border: none;
+    outline: none;
+    padding: 18px 4px; /* Ajustar el padding para centrar el texto verticalmente */
+    border-radius: 10px;
+    color: #fff; /* Cambiar el color del texto del botón */
+    font-size: 16px;
+    transform: .3s ease;
+    width: 100%; /* Asegurar que el botón abarque el 100% del ancho */
+    box-sizing: border-box; /* Asegurar que el padding no afecte el tamaño total */
+    display: flex;
+    align-items: center; /* Centrar el texto verticalmente */
+    justify-content: center; /* Centrar el texto horizontalmente */
+    margin-top: 10px; /* Añadir espacio entre los botones */
+}
+
+.btnRegresar:hover {
+    background: linear-gradient(45deg, #ff634796, #1a1a1a96); /* Degradado diferente al pasar el cursor */
+    box-shadow: 0 0 10px #ff6347; /* Añadir un efecto de sombra roja */
 }

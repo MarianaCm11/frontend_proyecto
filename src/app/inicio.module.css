@@ -8,13 +8,16 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #ffffff; /* Verde agua claro */
+    background-color: #ffffff; 
+    margin: 0;
+    background-color: #000; 
+    font-family: 'Montserrat', sans-serif; 
 }
 
 .title {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: #410d62; /* Morado oscuro */
+    color: #00bfff; /* Morado oscuro */
 }
 
 .links {
@@ -26,17 +29,19 @@
     display: flex;
     align-items: center;
     font-size: 1.2rem;
-    color: #6a1b9a; /* Morado oscuro */
+    color: #fff; /* Cambiar el color del texto del botón */
     text-decoration: none;
     padding: 0.5rem 1rem;
-    border: 1px solid #6a1b9a; /* Morado oscuro */
+    border: none; /* Eliminar el borde */
     border-radius: 4px;
     transition: background-color 0.3s, color 0.3s;
+    background: linear-gradient(45deg, #00bfff, #1a1a1a); /* Añadir un degradado al botón */
 }
 
 .link:hover {
-    background-color: #6a1b9a; /* Morado oscuro */
+    background: linear-gradient(45deg, #00bfff96, #1a1a1a96); /* Añadir un degradado al botón al pasar el cursor */
     color: #fff;
+    box-shadow: 0 0 10px #cbeaf5; /* Añadir un efecto de sombra azul */
 }
 
 .icon {

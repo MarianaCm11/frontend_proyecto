@@ -1,22 +1,23 @@
 import Link from 'next/link';
 import styles from './inicio.module.css'; // Importar el archivo de estilos
-import Head from 'next/head'; // Importar Head para incluir la fuente
-import { FaSignInAlt, FaUserPlus } from 'react-icons/fa'; // Importar iconos
+import { VscLinkExternal } from "react-icons/vsc";
+import { FiUserPlus, FiGithub } from "react-icons/fi";
+
 
 export default function Inicio() {
     return(
         <>
-            <Head>
-                <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
-            </Head>
             <div className={styles.container + ' ' + styles.fontMontserrat}>
-                <h1 className={styles.title}>Estas en inicio</h1>
+                <h1 className={styles.title}>Bienvenido a MICHIREGISTRO</h1>
                 <div className={styles.links}>
                     <Link href="/login" className={styles.link}>
-                        <FaSignInAlt className={styles.icon} /> Iniciar Sesión
+                        <VscLinkExternal  className={styles.icon} /> Login
                     </Link>
                     <Link href="/registro" className={styles.link}>
-                        <FaUserPlus className={styles.icon} /> Ir a Registro
+                        <FiUserPlus className={styles.icon} /> Registro
+                    </Link> 
+                    <Link href="/michi" className={styles.link}>
+                        <FiGithub className={styles.icon} /> Soy un michi
                     </Link>
                 </div>
             </div>
